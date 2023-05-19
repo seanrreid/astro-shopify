@@ -2,21 +2,6 @@
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-    colors: {
-      primary: "#507756",
-      secondary: "#d1cf5d",
-      accent: "#a12425",
-      neutral: "#eecf9e",
-      "base-100": "#f4f2ee",
-      info: "#53C0F3",
-      success: "#71EAD2",
-      warning: "#F3CC30",
-      error: "#E24056",
-    },
-    container: {
-      center: true,
-      padding: "1.5rem",
-    },
     extend: {
       keyframes: {
         shake: {
@@ -38,5 +23,26 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/aspect-ratio")],
+  daisyui: {
+    themes: [
+      {
+        yeahthatrabbit: {
+          primary: "#507756",
+          secondary: "#d1cf5d",
+          accent: "#a12425",
+          neutral: "#eecf9e",
+          "base-100": "#f4f2ee",
+          info: "#53C0F3",
+          success: "#71EAD2",
+          warning: "#F3CC30",
+          error: "#E24056",
+        },
+      },
+    ],
+  },
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("daisyui"),
+    require("@tailwindcss/aspect-ratio"),
+  ],
 };
