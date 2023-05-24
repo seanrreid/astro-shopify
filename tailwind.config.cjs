@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       keyframes: {
         shake: {
@@ -42,7 +45,7 @@ module.exports = {
   },
   plugins: [
     require("@tailwindcss/typography"),
-    require("daisyui"),
     require("@tailwindcss/aspect-ratio"),
+    require("daisyui"),
   ],
 };
