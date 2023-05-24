@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'Carton Six';
+    src: url('../fonts/CartonSix.woff2') format('woff2'),
+        url('../fonts/CartonSix.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 @layer base {
   html {
     @apply scroll-smooth;
@@ -31,3 +40,4 @@
     @apply disabled:cursor-not-allowed disabled:opacity-60;
   }
 }
+
